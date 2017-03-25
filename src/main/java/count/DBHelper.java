@@ -8,6 +8,21 @@ public class DBHelper {
 	private Connection conn = null;
 
 	public DBHelper(String driver, String url, String user, String password) {
+
+		switch (driver) {
+		case "mysql":
+			driver = "com.mysql.jdbc.Driver";
+			url = "jdbc:mysql://" + url;
+			break;
+		case "pgsql":
+			driver = "org.postgresql.Driver";
+			url = "jdbc:postgresql://" + url;
+			break;
+		default:
+			System.out.println("不支持此数据库");
+			break;
+		}
+
 		try {
 			Class.forName(driver);
 		} catch (ClassNotFoundException e) {
