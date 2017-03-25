@@ -46,15 +46,15 @@ public class Service {
 			ResultSet rs = pstmt.executeQuery();
 			Integer num1 = 0;
 			Integer num2 = 0;
-			System.out.print("±íÃû                 ");
-			System.out.println("±íĞĞÊı");
+			System.out.print("è¡¨å              ");
+			System.out.println("è¡¨è¡Œæ•°");
 			while (rs.next()) {
 				System.out.print(rs.getString(1) + "   ");
 				System.out.println(rs.getInt(2));
 				num1++;
 				num2 = num2 + rs.getInt(2);
 			}
-			System.out.println("ºÏ¼Æ£º" + num1 + "      " + num2);
+			System.out.println("åˆè®¡" + num1 + "      " + num2);
 			rs.close();
 		} catch (Exception e) {
 			throw e;

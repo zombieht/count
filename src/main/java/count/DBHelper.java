@@ -19,7 +19,7 @@ public class DBHelper {
 			url = "jdbc:postgresql://" + url;
 			break;
 		default:
-			System.out.println("²»Ö§³Ö´ËÊı¾İ¿â");
+			System.out.println("ä¸æ”¯æŒæ­¤æ•°æ®åº“");
 			break;
 		}
 

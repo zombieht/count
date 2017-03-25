@@ -10,7 +10,7 @@ public class Main {
 			} else if (args.length == 4) {
 				t.findAll(args[0], args[1], args[2], args[3], null);
 			} else {
-				System.out.println("²ÎÊı¸ñÊ½:£¨driver url name password table£©");
+				System.out.println("å‚æ•°æ ¼å¼ï¼šï¼ˆdriver url name password tableï¼‰");
 				// t.findAll("pgsql", "192.168.1.250:5432/cpm_db", "cpm", "cpm", null);
 			}
 
