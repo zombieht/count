@@ -18,14 +18,10 @@ public class Service {
 
 		try {
 			if (driverName.equals("PostgreSQL JDBC Driver")) {
-				sql = "CREATE OR REPLACE VIEW cpm_view AS SELECT  *  FROM (select A.relname,B.reltuples from pg_stat_user_tables A,pg_class B where A.relname=B.relname order by A.relname) a";
-				pstmt = conn.prepareStatement(sql);
-				pstmt.executeUpdate();
-
-				sql = "SELECT relname,reltuples FROM cpm_view";
+				sql = "select A.relname,B.reltuples from pg_stat_user_tables A,pg_class B where A.relname=B.relname order by A.relname";
 				pstmt = conn.prepareStatement(sql);
 				if (table != null) {
-					sql = "SELECT relname,reltuples FROM cpm_view where relname = ?";
+					sql = "select A.relname,B.reltuples from pg_stat_user_tables A,pg_class B where A.relname=B.relname and A.relname =? order by A.relname";
 					pstmt = jdc.getConnection().prepareStatement(sql);
 					pstmt.setString(1, table);
 				}
