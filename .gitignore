@@ -51,3 +51,4 @@ target/classes/count/Main.class
 target/classes/count/Model.class
 target/classes/count/DBHelper.class
 target/classes/count/Service.class
+/target/
